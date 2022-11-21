@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SharpZipLib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bsdiff.lib\bsdiff.lib.csproj" />
+  </ItemGroup>
+</Project>

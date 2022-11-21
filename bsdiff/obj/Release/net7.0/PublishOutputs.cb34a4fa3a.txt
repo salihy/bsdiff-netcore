@@ -1,0 +1,8 @@
+/Users/salihyildirim/Projects/Bsdiff/bsdiff/bin/Release/net7.0/publish/bsdiff
+/Users/salihyildirim/Projects/Bsdiff/bsdiff/bin/Release/net7.0/publish/bsdiff.dll
+/Users/salihyildirim/Projects/Bsdiff/bsdiff/bin/Release/net7.0/publish/bsdiff.deps.json
+/Users/salihyildirim/Projects/Bsdiff/bsdiff/bin/Release/net7.0/publish/bsdiff.runtimeconfig.json
+/Users/salihyildirim/Projects/Bsdiff/bsdiff/bin/Release/net7.0/publish/bsdiff.pdb
+/Users/salihyildirim/Projects/Bsdiff/bsdiff/bin/Release/net7.0/publish/ICSharpCode.SharpZipLib.dll
+/Users/salihyildirim/Projects/Bsdiff/bsdiff/bin/Release/net7.0/publish/bsdiff.lib.dll
+/Users/salihyildirim/Projects/Bsdiff/bsdiff/bin/Release/net7.0/publish/bsdiff.lib.pdb

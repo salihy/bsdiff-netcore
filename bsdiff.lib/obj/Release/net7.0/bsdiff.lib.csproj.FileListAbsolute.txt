@@ -1,0 +1,12 @@
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/bin/Release/net7.0/bsdiff.lib.deps.json
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/bin/Release/net7.0/bsdiff.lib.dll
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/bin/Release/net7.0/bsdiff.lib.pdb
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/bsdiff.lib.csproj.AssemblyReference.cache
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/bsdiff.lib.GeneratedMSBuildEditorConfig.editorconfig
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/bsdiff.lib.AssemblyInfoInputs.cache
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/bsdiff.lib.AssemblyInfo.cs
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/bsdiff.lib.csproj.CoreCompileInputs.cache
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/bsdiff.lib.dll
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/refint/bsdiff.lib.dll
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/bsdiff.lib.pdb
+/Users/salihyildirim/Projects/Bsdiff/bsdiff.lib/obj/Release/net7.0/ref/bsdiff.lib.dll
