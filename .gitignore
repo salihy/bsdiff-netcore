@@ -95,3 +95,12 @@
 /bspatch/obj/Release/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
 /bspatch/Properties/PublishProfiles/FolderProfile.pubxml
 /.vs
+/bsdiff/bin/Debug/net7.0/bsdiff.pdb
+/bsdiff/bin/Debug/net7.0/bsdiff.exe
+/bsdiff/bin/Debug/net7.0/bsdiff.dll
+/bsdiff/bin/Debug/net7.0/bsdiff.deps.json
+/bsdiff/bin/Debug/net7.0/Bsdiff.Core.pdb
+/bsdiff/bin/Debug/net7.0/Bsdiff.Core.dll
+/bsdiff/obj/project.nuget.cache
+/bsdiff/obj/project.assets.json
+/bsdiff/obj/bsdiff.csproj.nuget.dgspec.json
