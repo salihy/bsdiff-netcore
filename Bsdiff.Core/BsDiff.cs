@@ -1,32 +1,34 @@
-﻿using ICSharpCode.SharpZipLib.BZip2;
+﻿using System;
+using ICSharpCode.SharpZipLib.BZip2;
+using System.IO;
 
-namespace bsdiff.Core
+namespace BsDiff.Core
 {
     /*
-	The original bsdiff.c source code (http://www.daemonology.net/bsdiff/) is
-	distributed under the following license:
-	Copyright 2003-2005 Colin Percival
-	All rights reserved
-	Redistribution and use in source and binary forms, with or without
-	modification, are permitted providing that the following conditions 
-	are met:
-	1. Redistributions of source code must retain the above copyright
-		notice, this list of conditions and the following disclaimer.
-	2. Redistributions in binary form must reproduce the above copyright
-		notice, this list of conditions and the following disclaimer in the
-		documentation and/or other materials provided with the distribution.
-	THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-	IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-	ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
-	DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-	DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-	OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-	HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
-	STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
-	IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-	POSSIBILITY OF SUCH DAMAGE.
-	*/
+    The original bsdiff.c source code (http://www.daemonology.net/bsdiff/) is
+    distributed under the following license:
+    Copyright 2003-2005 Colin Percival
+    All rights reserved
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted providing that the following conditions 
+    are met:
+    1. Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+    2. Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in the
+        documentation and/or other materials provided with the distribution.
+    THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+    IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+    WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+    ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+    DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+    OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+    IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+    POSSIBILITY OF SUCH DAMAGE.
+    */
     public class BinaryPatchUtility
     {
         /// <summary>
@@ -51,15 +53,15 @@ namespace bsdiff.Core
                 throw new ArgumentException("Output stream must be writable.", "output");
 
             /* Header is
-				0	8	 "BSDIFF40"
-				8	8	length of bzip2ed ctrl block
-				16	8	length of bzip2ed diff block
-				24	8	length of new file */
+                0	8	 "BSDIFF40"
+                8	8	length of bzip2ed ctrl block
+                16	8	length of bzip2ed diff block
+                24	8	length of new file */
             /* File is
-				0	32	Header
-				32	??	Bzip2ed ctrl block
-				??	??	Bzip2ed diff block
-				??	??	Bzip2ed extra block */
+                0	32	Header
+                32	??	Bzip2ed ctrl block
+                ??	??	Bzip2ed diff block
+                ??	??	Bzip2ed extra block */
             byte[] header = new byte[c_headerSize];
             WriteInt64(c_fileSignature, header, 0); // "BSDIFF40"
             WriteInt64(0, header, 8);
@@ -236,18 +238,18 @@ namespace bsdiff.Core
                 throw new ArgumentNullException("output");
 
             /*
-			File format:
-				0	8	"BSDIFF40"
-				8	8	X
-				16	8	Y
-				24	8	sizeof(newfile)
-				32	X	bzip2(control block)
-				32+X	Y	bzip2(diff block)
-				32+X+Y	???	bzip2(extra block)
-			with control block a set of triples (x,y,z) meaning "add x bytes
-			from oldfile to x bytes from the diff block; copy y bytes from the
-			extra block; seek forwards in oldfile by z bytes".
-			*/
+            File format:
+                0	8	"BSDIFF40"
+                8	8	X
+                16	8	Y
+                24	8	sizeof(newfile)
+                32	X	bzip2(control block)
+                32+X	Y	bzip2(diff block)
+                32+X+Y	???	bzip2(extra block)
+            with control block a set of triples (x,y,z) meaning "add x bytes
+            from oldfile to x bytes from the diff block; copy y bytes from the
+            extra block; seek forwards in oldfile by z bytes".
+            */
             // read header
             long controlLength, diffLength, newSize;
             using (Stream patchStream = openPatchStream())

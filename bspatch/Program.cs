@@ -1,6 +1,7 @@
 ﻿
-using bsdiff.Core;
-
+using BsDiff.Core;
+using System;
+using System.IO;
 
 namespace bspatch
 {
