@@ -1,5 +1,5 @@
 ﻿
-using bsdiff.lib;
+using bsdiff.Core;
 
 
 namespace bspatch
