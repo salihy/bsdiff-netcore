@@ -2,7 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs
 /bsdiff/obj/Debug/net7.0/ref/bsdiff.dll
 /bsdiff/obj/Debug/net7.0/refint/bsdiff.dll
 /bsdiff/obj/Debug/net7.0/bsdiff.pdb
@@ -95,3 +94,4 @@
 /bspatch/obj/Release/net7.0/bspatch.AssemblyInfo.cs
 /bspatch/obj/Release/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
 /bspatch/Properties/PublishProfiles/FolderProfile.pubxml
+/.vs
