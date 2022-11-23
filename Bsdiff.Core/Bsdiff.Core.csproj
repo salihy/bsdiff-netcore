@@ -1,9 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>BsDiff Delta Algorithm for dotnet core</Title>
+    <Description>bsdiff and bspatch are tools for building and applying patches to binary files. For more information, see http://www.daemonology.net/bsdiff/</Description>
+    <PackageProjectUrl>https://github.com/salihy/bsdiff-netcore</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/salihy/bsdiff-netcore</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>bsdiff; diff; delta</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SharpZipLib" Version="1.4.1" />
