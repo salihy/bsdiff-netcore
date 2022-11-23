@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jKa77KFK/igIASJMQM7QKhxKDOrgMTl8JqYVFbhaCLIX0/Xw7lGKoKd4prvFYr34SmEZWgx0+R24MWkbRLYsGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\salih\\Source\\Repos\\bsdiff-netcore\\bsdiff.lib\\bsdiff.lib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\salih\\.nuget\\packages\\sharpziplib\\1.4.1\\sharpziplib.1.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

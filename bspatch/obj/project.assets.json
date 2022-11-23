@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "SharpZipLib/1.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "bsdiff.lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "SharpZipLib": "1.4.1"
+        },
+        "compile": {
+          "bin/placeholder/bsdiff.lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/bsdiff.lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SharpZipLib/1.4.1": {
+      "sha512": "X8QiHZS7+bbZy85LfpKCAL9oh0yZkiiecWhQL5F1Yn1AKFDYiOzR3UG5vI+9bDYGRGyseVdMW5sTH8mv8LXF1g==",
+      "type": "package",
+      "path": "sharpziplib/1.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/sharpziplib-nuget-256x256.png",
+        "lib/net6.0/ICSharpCode.SharpZipLib.dll",
+        "lib/net6.0/ICSharpCode.SharpZipLib.pdb",
+        "lib/net6.0/ICSharpCode.SharpZipLib.xml",
+        "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll",
+        "lib/netstandard2.0/ICSharpCode.SharpZipLib.pdb",
+        "lib/netstandard2.0/ICSharpCode.SharpZipLib.xml",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.pdb",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.xml",
+        "sharpziplib.1.4.1.nupkg.sha512",
+        "sharpziplib.nuspec"
+      ]
+    },
+    "bsdiff.lib/1.0.0": {
+      "type": "project",
+      "path": "../bsdiff.lib/bsdiff.lib.csproj",
+      "msbuildProject": "../bsdiff.lib/bsdiff.lib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "bsdiff.lib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\salih\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\salih\\Source\\Repos\\bsdiff-netcore\\bspatch\\bspatch.csproj",
+      "projectName": "bspatch",
+      "projectPath": "C:\\Users\\salih\\Source\\Repos\\bsdiff-netcore\\bspatch\\bspatch.csproj",
+      "packagesPath": "C:\\Users\\salih\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\salih\\Source\\Repos\\bsdiff-netcore\\bspatch\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\salih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "C:\\Users\\salih\\Source\\Repos\\bsdiff-netcore\\bsdiff.lib\\bsdiff.lib.csproj": {
+              "projectPath": "C:\\Users\\salih\\Source\\Repos\\bsdiff-netcore\\bsdiff.lib\\bsdiff.lib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

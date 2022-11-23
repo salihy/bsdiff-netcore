@@ -1,6 +1,6 @@
 ﻿using ICSharpCode.SharpZipLib.BZip2;
 
-namespace bsdiff.lib
+namespace bsdiff.Core
 {
     /*
 	The original bsdiff.c source code (http://www.daemonology.net/bsdiff/) is
