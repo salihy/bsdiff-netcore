@@ -104,3 +104,8 @@
 /bsdiff/obj/project.nuget.cache
 /bsdiff/obj/project.assets.json
 /bsdiff/obj/bsdiff.csproj.nuget.dgspec.json
+/bsdiff/obj/Release/net7.0/bsdiff.assets.cache
+/Bsdiff.Core/bin/Release/netstandard2.1/Bsdiff.Core.pdb
+/Bsdiff.Core/bin/Release/netstandard2.1/Bsdiff.Core.dll
+/Bsdiff.Core/bin/Release/netstandard2.1/Bsdiff.Core.deps.json
+/Bsdiff.Core/bin/Release/Bsdiff.Core.1.0.1.nupkg
