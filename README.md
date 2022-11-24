@@ -8,29 +8,29 @@ For more information, see http://www.daemonology.net/bsdiff/
 
 ## Create Diff File
 ```C#
-                try
-                {
-                    using (FileStream output = new FileStream(patchFile, FileMode.Create))
-                        BinaryPatchUtility.Create(File.ReadAllBytes(oldFile), File.ReadAllBytes(newFile), output);
-                }
-                catch (FileNotFoundException ex)
-                {
-                    Console.Error.WriteLine("Could not open '{0}'.", ex.FileName);
-                }
+    try
+    {
+        using (FileStream output = new FileStream(patchFile, FileMode.Create))
+            BinaryPatchUtility.Create(File.ReadAllBytes(oldFile), File.ReadAllBytes(newFile), output);
+    }
+    catch (FileNotFoundException ex)
+    {
+        Console.Error.WriteLine("Could not open '{0}'.", ex.FileName);
+    }
 ```
 
 ## Patch Diff File
 ```C#
-            try
-            {
-                using (FileStream input = new FileStream(oldFile, FileMode.Open, FileAccess.Read, FileShare.Read))
-                using (FileStream output = new FileStream(newFile, FileMode.Create))
-                    BinaryPatchUtility.Apply(input, () => new FileStream(patchFile, FileMode.Open, FileAccess.Read, FileShare.Read), output);
-            }
-            catch (FileNotFoundException ex)
-            {
-                Console.Error.WriteLine("Could not open '{0}'.", ex.FileName);
-            }
+    try
+    {
+        using (FileStream input = new FileStream(oldFile, FileMode.Open, FileAccess.Read, FileShare.Read))
+        using (FileStream output = new FileStream(newFile, FileMode.Create))
+            BinaryPatchUtility.Apply(input, () => new FileStream(patchFile, FileMode.Open, FileAccess.Read, FileShare.Read), output);
+    }
+    catch (FileNotFoundException ex)
+    {
+        Console.Error.WriteLine("Could not open '{0}'.", ex.FileName);
+    }
 ```
 
 ----
